@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Security.Permissions;
 
 namespace My_web_API.Data
@@ -17,6 +18,12 @@ namespace My_web_API.Data
         public string NguoiNhan { get; set; }
         public string DiaChiGiao { get; set; }
         public string SoDienThoai { get; set; }
+
+        public ICollection<DonHangChiTiet> donHangChiTiets { get; set; }
+        public DonHang()
+        {
+            donHangChiTiets = new List<DonHangChiTiet>();
+        }
 
     }
 }
